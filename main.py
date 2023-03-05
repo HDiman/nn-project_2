@@ -72,8 +72,8 @@ for month in range(time_horizon):
     print(f"Всего внесено: {start_capital} руб.")
 
     # Блок уравнивания
-    answer = input("Уравнять 50% на 50% (Да - a, Нет - s): ")
-    if answer == "a":
+    # answer = input("Уравнять 50% на 50% (Да - a, Нет - s): ")
+    if stock_interest >= 70 or bond_interest >= 70:
         first_part = round(personal_case) / 2
         second_part = round(personal_case) - first_part
         stock_num = round(first_part / stock_price)
@@ -81,7 +81,7 @@ for month in range(time_horizon):
         bond_num = round(second_part / bond_price)
         cash = 0
 
-    # time.sleep(3)
+    time.sleep(3)
     if month < 119:
         clear()
 
