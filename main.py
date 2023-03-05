@@ -34,7 +34,7 @@ for month in range(time_horizon):
     if force_majeure == 24:
         print("Падение -50%")
         stock_price = stock_price / 2
-    elif force_majeure == 12 or force_majeure == 48:
+    elif force_majeure == 12:
         print("Рост +100%")
         stock_price = stock_price * 2
     stock_price = round(stock_price, 2)
@@ -74,8 +74,8 @@ for month in range(time_horizon):
         bond_num = round(second_part / bond_price)
 
     # time.sleep(3)
-
-    clear()
+    if month < 119:
+        clear()
 
 
 
