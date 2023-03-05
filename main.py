@@ -15,12 +15,13 @@ volatility = 0.2 # волатильность акции (стандартное
 time_horizon = 120 # количество дней наблюдения
 
 
-
+# Блок закупок
 print(f"У вас на счету: {start_capital} рублей")
 print(f"Цена акции: {stock_price}")
 print(f"Цена облигации: {bond_price}")
 stock_num = int(input("Сколько акций купить? "))
 bond_num = int(input("Сколько облигаций купить? "))
+clear()
 
 # Market Prices
 for month in range(time_horizon):
