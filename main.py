@@ -9,10 +9,10 @@ def clear():
 
 start_capital = 100000.00
 cash = 0.00
-stock_price = 100.0 # stock start price
-bond_price = 1000.0 # bond start price
-volatility = 0.2 # волатильность акции (стандартное отклонение ежемесячных процентных изменений цены)
-time_horizon = 120 # количество дней наблюдения
+stock_price = 100.0  # stock start price
+bond_price = 1000.0  # bond start price
+volatility = 0.2  # волатильность акции (стандартное отклонение ежемесячных процентных изменений цены)
+time_horizon = 120  # количество дней наблюдения
 
 
 # Блок закупок
@@ -41,7 +41,7 @@ for month in range(time_horizon):
     stock_price = round(stock_price, 2)
 
     # Цена облигации вместе с процентами
-    bond_price = round((bond_price + bond_price * 0.0058), 2)
+    bond_price = round((bond_price + 6), 2)  # пересчитать калькуляцию !!!
 
     # Общая сумма налички
     cash += 10000
@@ -73,13 +73,21 @@ for month in range(time_horizon):
 
     # Блок уравнивания
     # answer = input("Уравнять 50% на 50% (Да - a, Нет - s): ")
-    if stock_interest >= 70 or bond_interest >= 70:
+    if stock_interest >= 70 or bond_interest >= 70 or cash == 50000:
         first_part = round(personal_case) / 2
         second_part = round(personal_case) - first_part
         stock_num = round(first_part / stock_price)
         bond_price = 1000
         bond_num = round(second_part / bond_price)
         cash = 0
+
+    # Доработать
+    # if cash == 30000:
+    #     print("Докупаем облигации на 30 тыс. руб.")
+    #     bond_sum = bond_case + cash
+    #     bond_price = 1000
+    #     bond_num = round(bond_sum / bond_price)
+    #     cash = 0
 
     time.sleep(3)
     if month < 119:
