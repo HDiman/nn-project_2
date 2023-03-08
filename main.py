@@ -24,7 +24,7 @@ bond_num = int(input("Сколько облигаций купить? "))
 clear()
 
 if __name__ == "__main__":
-    # Market Prices
+    # Торговая площадка
     for month in range(time_horizon):
 
         # Цена акции
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         bond_price = round((bond_price + 6), 2)  # пересчитать калькуляцию !!!
 
         # Общая сумма налички
-        cash += 10000
+        cash += 20000
 
         # Блок оценки стоимости портфеля
         stock_case = round((stock_price * stock_num), 2)
@@ -53,7 +53,7 @@ if __name__ == "__main__":
         personal_case = round((stock_case + bond_case + cash), 2)
         stock_interest = round(stock_case / (personal_case / 100))
         bond_interest = 100 - stock_interest
-        start_capital += 10000
+        start_capital += 20000
 
         # Блок вывода информации портфеля
         print(f"Месяц: {month+1}")
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
         # Блок уравнивания
         # answer = input("Уравнять 50% на 50% (Да - a, Нет - s): ")
-        if stock_interest >= 70 or bond_interest >= 70 or cash == 50000:
+        if stock_interest >= 70 or bond_interest >= 70 or cash == 120000:
             first_part = round(personal_case) / 2
             second_part = round(personal_case) - first_part
             stock_num = round(first_part / stock_price)

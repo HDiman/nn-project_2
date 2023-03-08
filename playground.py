@@ -36,13 +36,13 @@
 # clear()
 # print("Привет")
 
-import os
-import time
-
-def clear():
-    os.system("clear")
-
-print("Hello,")
-time.sleep(1)
-clear()
-print("World!")
+# import os
+# import time
+#
+# def clear():
+#     os.system("clear")
+#
+# print("Hello,")
+# time.sleep(1)
+# clear()
+# print("World!")
